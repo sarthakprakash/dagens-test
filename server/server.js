@@ -25,7 +25,7 @@ process.on('SIGINT', function () {
 app.post('/products', (req, res) => {
   const { name, category, price } = req.body;
   const newProduct = {
-    id: uuidv4(), // Use a UUID library to generate unique IDs
+    id: uuidv4(),
     name,
     category,
     price,
@@ -65,7 +65,7 @@ app.get('/products', (req, res) => {
 
 app.get('/products/:id/nearest', (req, res) => {
   const { id } = req.params;
-  const N = 5; // For example, find 5 nearest priced products
+  const N = 5; 
   const targetProduct = products.find((p) => p.id === id);
 
   if (!targetProduct) {

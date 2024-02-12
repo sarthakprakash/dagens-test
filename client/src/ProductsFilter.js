@@ -22,7 +22,6 @@ const FilteredProducts = () => {
     fetchProducts();
   }, [filters]);
 
-  // Handlers to change filters and page
   const handleChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
   };
